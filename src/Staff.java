@@ -56,5 +56,10 @@ public class Staff {
 	public void setRole(String role) {
 		this.role = role;
 	}
+	public String toString(){
+		String out="";
+		out+="Name: "+ this.name+ "\tSurname: "+ this.surname+ "\tMail: "+this.mail+"\t Role: "+ this.role;
+		return out;
+	}
 
 }

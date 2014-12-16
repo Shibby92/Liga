@@ -52,4 +52,11 @@ public class Player {
 	public Skills getSkill() {
 		return skill;
 	}
+	public String toString(){
+		String out="";
+		out+="Name: "+ this.name+ "\tSurname: "+ this.surname+ "\tKit number: "+this.number;
+		out+="\nSkills:\n";
+		out+=this.skill.toString();
+		return out;
+	}
 }

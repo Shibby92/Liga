@@ -4,6 +4,16 @@ public class Skills {
 	private double shoot;
 	private double header;
 
+	public String toString() {
+		String out = "";
+		out += "Speed: " + this.speed;
+		out += "\nPass: " + this.pass;
+		out += "\nShoot: " + this.shoot;
+		out += "\nHeader: " + this.header;
+		out+="\n\n";
+		return out;
+	}
+
 	public Skills() {
 		setSpeed(1);
 		setPass(1);
