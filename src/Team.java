@@ -3,7 +3,7 @@ public class Team {
 	private String name;
 	private String city;
 	private Staff employee;
-	private static int NumberOfPLayers = 0;
+	private int NumberOfPLayers = 0;
 
 	public String getName() {
 		return name;
