@@ -53,6 +53,7 @@ public class Team {
 		setCity(other.city);
 		setName(other.name);
 		this.employee = new Staff(other.employee);
+		this.NumberOfPLayers=other.NumberOfPLayers;
 
 	}
 

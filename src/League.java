@@ -1,26 +1,32 @@
 public class League {
 	private Team[] teams;
-	private static int numTeams = 0;
+	private int numTeams = 0;
+	
 
+	public Team getTeam(int place) {
+		return teams[place];
+	}
 	public League(int number) {
 		this.teams = new Team[number];
 	}
 
 	public void addTeam(Team other) {
-		teams[numTeams] = new Team(other);
+		teams[numTeams] = other;
 		numTeams++;
 	}
 
 	public void startCup() {
-		int size = numTeams;
-		for (int i = 0; i < size / 2; i++) {
+		int size = numTeams-1;
+		int games= numTeams/2;
+		for (int i = 0; i < games; i++) {
 			removeTeam(loser(teams[i], teams[size]));
 			size--;
 		}
+		prepareForNextStage();
 	}
 
 	public void removeTeam(Team loser) {
-		loser = null;
+		loser.setName("loser");
 		numTeams--;
 	}
 
@@ -31,15 +37,16 @@ public class League {
 			return team2;
 	}
 	public void prepareForNextStage(){
+		if(teams.length>2){
 		Team [] tmp= new Team[teams.length/2];
 		int counter=0;
 		for(int i =0 ;i<teams.length;i++){
-			if (teams[i]!=null){
+			if (!teams[i].getName().equals("loser")){
 				tmp[counter]= new Team(teams[i]);
 			counter++;
 			}
 		}
 		this.teams=tmp;
 	}
-
+	}
 }
