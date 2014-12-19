@@ -5,8 +5,9 @@ public class Player {
 	private Skills skill;
 
 	public Player() {
-		setName("NULL");
-		setSurname("NULL");
+		String empty="NULL";
+		setName(empty);
+		setSurname(empty);
 		setNumber(1);
 		this.skill = new Skills();
 	}

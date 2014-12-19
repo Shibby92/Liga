@@ -5,10 +5,11 @@ public class Staff {
 	private String role;
 
 	public Staff() {
-		setName("NULL");
-		setSurname("NULL");
-		setMail("NULL");
-		setRole("NULL");
+		String empty="NULL";
+		setName(empty);
+		setSurname(empty);
+		setMail(empty);
+		setRole(empty);
 	}
 
 	public Staff(String name, String surname, String mail, String role) {
